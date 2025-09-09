@@ -1,0 +1,247 @@
+<!-- Amusements Page - Super Cool Attractions -->
+<app-navbar></app-navbar>
+<div class="amusements-page" style="margin-top: 80px;">
+  <!-- Hero Section -->
+  <section class="amusements-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-small">Experience the</span>
+        <span class="title-main">Thrill of Nature</span>
+      </h1>
+      <p class="hero-description">
+        Discover exciting adventures and fun-filled activities at Kothwalguda Eco Park
+      </p>
+    </div>
+    <div class="floating-elements">
+      <div class="float-element element-1"></div>
+      <div class="float-element element-2"></div>
+      <div class="float-element element-3"></div>
+    </div>
+  </section>
+
+  <!-- Featured Attractions -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Must Try</span>
+        <h2 class="section-title">Featured Attractions</h2>
+      </div>
+      
+      <div class="featured-grid">
+        <div class="featured-card main">
+          <div class="card-image">
+            <img src="/nature-4.jpg" alt="India's Largest Aquarium">
+            <div class="card-badge">Most Popular</div>
+          </div>
+          <div class="card-content">
+            <h3>India's Largest Aquarium</h3>
+            <p>Dive into an underwater wonderland featuring over 200 species of marine life in our state-of-the-art aquarium.</p>
+            <div class="card-features">
+              <span><i class="pi pi-clock"></i> 2 Hours</span>
+              <span><i class="pi pi-users"></i> All Ages</span>
+              <span><i class="pi pi-star-fill"></i> 4.9 Rating</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="featured-card">
+          <div class="card-image">
+            <img src="/nature-2.jpg" alt="Butterfly Garden">
+          </div>
+          <div class="card-content">
+            <h3>Butterfly Conservatory</h3>
+            <p>Walk through a tropical paradise with hundreds of butterflies.</p>
+            <div class="card-features">
+              <span><i class="pi pi-clock"></i> 1 Hour</span>
+              <span><i class="pi pi-star-fill"></i> 4.8</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="featured-card">
+          <div class="card-image">
+            <img src="/ride-1.jpg" alt="Zipline Adventure">
+          </div>
+          <div class="card-content">
+            <h3>Zipline Adventure</h3>
+            <p>Soar through the canopy on our thrilling 500m zipline course.</p>
+            <div class="card-features">
+              <span><i class="pi pi-clock"></i> 45 Mins</span>
+              <span><i class="pi pi-star-fill"></i> 4.9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Amusements Grid -->
+  <section class="amusements-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Explore All</span>
+        <h2 class="section-title">Park Amusements</h2>
+      </div>
+      
+      <div class="amusements-grid">
+        <div class="amusement-card" *ngFor="let amusement of amusements">
+          <div class="card-inner">
+            <div class="card-front">
+              <img [src]="amusement.image" [alt]="amusement.name">
+              <div class="card-overlay">
+                <i [class]="'icon pi ' + amusement.icon"></i>
+                <h3>{{ amusement.name }}</h3>
+                <p class="card-category">{{ amusement.category }}</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="back-content">
+                <h3>{{ amusement.name }}</h3>
+                <p>{{ amusement.description }}</p>
+                <div class="amusement-details">
+                  <div class="detail-item">
+                    <i class="pi pi-clock"></i>
+                    <span>{{ amusement.duration }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="pi pi-users"></i>
+                    <span>{{ amusement.ageGroup }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="pi pi-ticket"></i>
+                    <span>₹{{ amusement.price }}</span>
+                  </div>
+                </div>
+                <button class="book-btn">
+                  <i class="pi pi-calendar"></i>
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adventure Zone -->
+  <section class="adventure-zone">
+    <div class="container">
+      <div class="zone-content">
+        <div class="zone-info">
+          <span class="zone-badge">Thrill Seekers</span>
+          <h2 class="zone-title">Adventure Zone</h2>
+          <p class="zone-description">
+            Challenge yourself with our exciting adventure activities designed for thrill-seekers. 
+            From rope courses to rock climbing, experience adrenaline-pumping fun in a safe environment.
+          </p>
+          <div class="adventure-list">
+            <div class="adventure-item">
+              <i class="pi pi-check-circle"></i>
+              <span>Rock Climbing Wall</span>
+            </div>
+            <div class="adventure-item">
+              <i class="pi pi-check-circle"></i>
+              <span>High Rope Course</span>
+            </div>
+            <div class="adventure-item">
+              <i class="pi pi-check-circle"></i>
+              <span>Burma Bridge</span>
+            </div>
+            <div class="adventure-item">
+              <i class="pi pi-check-circle"></i>
+              <span>Rappelling</span>
+            </div>
+            <div class="adventure-item">
+              <i class="pi pi-check-circle"></i>
+              <span>Obstacle Course</span>
+            </div>
+            <div class="adventure-item">
+              <i class="pi pi-check-circle"></i>
+              <span>Team Building Activities</span>
+            </div>
+          </div>
+          <button class="zone-btn">
+            <i class="pi pi-bolt"></i>
+            <span>Explore Adventures</span>
+          </button>
+        </div>
+        <div class="zone-image">
+          <img src="/ride-3.jpg" alt="Adventure Zone">
+          <div class="image-decoration">
+            <div class="deco-circle"></div>
+            <div class="deco-dots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids Zone -->
+  <section class="kids-zone">
+    <div class="container">
+      <div class="kids-header">
+        <h2 class="kids-title">Kids Paradise</h2>
+        <p class="kids-subtitle">Safe and fun activities designed especially for children</p>
+      </div>
+      
+      <div class="kids-features">
+        <div class="kids-card">
+          <div class="kids-icon">
+            <i class="pi pi-sun"></i>
+          </div>
+          <h3>Play Area</h3>
+          <p>Colorful playground with slides, swings, and climbing structures</p>
+        </div>
+        
+        <div class="kids-card">
+          <div class="kids-icon">
+            <i class="pi pi-palette"></i>
+          </div>
+          <h3>Art & Craft</h3>
+          <p>Creative workshops for young artists to express themselves</p>
+        </div>
+        
+        <div class="kids-card">
+          <div class="kids-icon">
+            <i class="pi pi-book"></i>
+          </div>
+          <h3>Nature Education</h3>
+          <p>Fun learning activities about wildlife and environment</p>
+        </div>
+        
+        <div class="kids-card">
+          <div class="kids-icon">
+            <i class="pi pi-gift"></i>
+          </div>
+          <h3>Birthday Parties</h3>
+          <p>Special packages for memorable birthday celebrations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready for an Adventure?</h2>
+        <p>Book your tickets now and experience the best of nature and fun</p>
+        <div class="cta-buttons">
+          <button class="cta-btn primary" routerLink="/book-tickets">
+            <i class="pi pi-ticket"></i>
+            <span>Book Tickets</span>
+          </button>
+          <button class="cta-btn secondary">
+            <i class="pi pi-map"></i>
+            <span>View Park Map</span>
+          </button>
+        </div>
+      </div>
+      <div class="cta-decoration">
+        <div class="leaf-pattern"></div>
+      </div>
+    </div>
+  </section>
+</div>
