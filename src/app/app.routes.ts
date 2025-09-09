@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -6,9 +7,22 @@ export const routes: Routes = [
     path: 'home', 
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) 
   },
+  {
+    path: 'about',
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+  },
+  {
+    path: 'gallery',
+    loadComponent: () => import('./pages/gallery/gallery.component').then(m => m.GalleryComponent)
+  },
+  {
+    path: 'amusements',
+    loadComponent: () => import('./pages/amusements/amusements.component').then(m => m.AmusementsComponent)
+  },
   { 
     path: 'book-tickets', 
-    loadComponent: () => import('./pages/book-tickets/book-tickets.component').then(m => m.BookTicketsComponent) 
+    loadComponent: () => import('./pages/book-tickets/book-tickets.component').then(m => m.BookTicketsComponent),
+    canActivate: [authGuard]
   },
   { 
     path: 'staff', 
@@ -45,6 +59,10 @@ export const routes: Routes = [
   { 
     path: 'admin/users', 
     loadComponent: () => import('./pages/admin/users/users.component').then(m => m.UsersComponent) 
+  },
+  { 
+    path: 'admin/special-days', 
+    loadComponent: () => import('./pages/admin/special-days/special-days.component').then(m => m.SpecialDaysComponent) 
   },
   { 
     path: 'callback', 

@@ -1,0 +1,67 @@
+<!-- Enhanced Green Navbar -->
+<nav class="navbar-enhanced" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <div class="eco-logo">
+        <img src="/logo.png" alt="Kothwalguda Eco Park Logo" class="logo-image">
+      </div>
+      <div class="brand-info">
+        <h1 class="brand-title">Kothwalguda</h1>
+        <span class="brand-subtitle">Eco Paradise</span>
+      </div>
+    </div>
+
+    <div class="nav-menu-wrapper" [class.active]="isMenuOpen">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link">
+            <i class="pi pi-home"></i>
+            <span>Home</span>
+            <div class="nav-indicator"></div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link">
+            <i class="pi pi-info-circle"></i>
+            <span>About</span>
+            <div class="nav-indicator"></div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/gallery" routerLinkActive="active" class="nav-link">
+            <i class="pi pi-images"></i>
+            <span>Gallery</span>
+            <div class="nav-indicator"></div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/amusements" routerLinkActive="active" class="nav-link">
+            <i class="pi pi-star-fill"></i>
+            <span>Amusements</span>
+            <div class="nav-indicator"></div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a (click)="scrollToSection('contact')" class="nav-link">
+            <i class="pi pi-phone"></i>
+            <span>Contact</span>
+            <div class="nav-indicator"></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-cta">
+      <button class="eco-btn" (click)="navigateToBookTickets()">
+        <span class="btn-text">Book Tickets</span>
+        <span class="btn-icon"><i class="pi pi-ticket"></i></span>
+      </button>
+    </div>
+
+    <div class="mobile-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
