@@ -248,17 +248,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
   }
 
-  playVideo() {
-    const video = document.querySelector('video') as HTMLVideoElement;
-    if (video) {
-      if (video.paused) {
-        video.play();
-        video.muted = false;
-      } else {
-        video.pause();
-      }
-    }
-  }
 
   toggleVideo() {
     if (this.parkVideo) {
