@@ -356,6 +356,9 @@ button {
   gap: 4px;
   cursor: pointer;
   padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobile-toggle span {
@@ -364,6 +367,16 @@ button {
   background: white;
   border-radius: 2px;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.mobile-toggle:hover span {
+  background: #ffffff;
 }
 
 .navbar-enhanced.scrolled {
@@ -476,13 +489,15 @@ button {
   }
   
   .mobile-toggle {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
   }
   
   .mobile-toggle span {
     height: 2px;
-    margin: 4px 0;
+    margin: 3px 0;
+    width: 100%;
   }
 }
 
